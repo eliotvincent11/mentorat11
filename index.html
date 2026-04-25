@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appel Découverte — Eliot</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Cal.com element-click embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
+    Cal.ns.appeldecouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
+  <!-- Cal.com floating button -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
+    Cal.ns.appeldecouverte("floatingButton", {"calLink":"eliot.vincent/appeldecouverte","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"},"buttonText":"Réserve ton appel"});
+    Cal.ns.appeldecouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bordeaux-deep:  #6B1E2E;
+      --bordeaux-mid:   #8B2635;
+      --bordeaux-light: #A63347;
+      --terracotta:     #C4724A;
+      --cream:          #FAF5F0;
+      --cream-dark:     #F2EAE1;
+      --rose-muted:     #D4A5A5;
+      --text-dark:      #2C1A1A;
+      --text-body:      #5C3A3A;
+      --text-light:     #9C7070;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text-body);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.6rem, 7vw, 4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--bordeaux-deep);
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--bordeaux-deep);
+    }
+
+    /* ── Nav ── */
+    .nav { padding: 24px 0 0; display: flex; justify-content: center; }
+    .nav-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem; font-weight: 500;
+      color: var(--bordeaux-mid);
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      padding-top: 48px; padding-bottom: 100px;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute;
+      top: -120px; right: -80px;
+      width: 340px; height: 340px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,38,53,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Photo ── */
+    .hero-photo-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
+    .hero-photo {
+      width: 112px; height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      filter: saturate(0.9) brightness(1.02);
+      display: block;
+      mask-image: radial-gradient(circle at center, black 58%, transparent 100%);
+      -webkit-mask-image: radial-gradient(circle at center, black 58%, transparent 100%);
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 28px; display: block;
+    }
+
+    .hero-headline { margin-bottom: 28px; }
+    .hero-headline em { font-style: italic; color: var(--bordeaux-light); }
+
+    .hero-sub {
+      font-size: 1.1rem; color: var(--text-body);
+      line-height: 1.85; max-width: 520px; margin-bottom: 44px;
+    }
+
+    /* ── CTA Button ── */
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--bordeaux-deep); color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em;
+      padding: 14px 28px; border-radius: 100px; border: none; cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 20px rgba(107,30,46,0.22);
+    }
+    .cta-btn:hover { background: var(--bordeaux-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(107,30,46,0.3); }
+    .cta-btn:active { transform: translateY(0); }
+    .cta-arrow { transition: transform 0.2s ease; }
+    .cta-btn:hover .cta-arrow { transform: translateX(3px); }
+
+    /* ── PAIN POINTS ── */
+    #pain { background: none; padding-top: 0; }
+    .pain-intro {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem; font-style: italic;
+      color: var(--text-light); margin-bottom: 48px; text-align: center;
+    }
+    .pain-list { list-style: none; display: flex; flex-direction: column; }
+    .pain-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 22px 0; border-bottom: 1px solid rgba(180,120,120,0.18);
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .pain-item.visible { opacity: 1; transform: translateY(0); }
+    .pain-item:first-child { border-top: 1px solid rgba(180,120,120,0.18); }
+    .pain-dot { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--terracotta); margin-top: 10px; opacity: 0.7; }
+    .pain-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.05rem, 3vw, 1.2rem); font-weight: 400;
+      color: var(--text-dark); line-height: 1.6;
+    }
+
+    /* ── NUDGE LINE ── */
+    .nudge-line { padding: 56px 0 20px; text-align: center; }
+    .nudge-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-style: italic; font-weight: 400;
+      color: var(--bordeaux-mid); line-height: 1.5;
+    }
+
+    /* ── TRANSITION ── */
+    #transition-line { padding: 28px 0 64px; text-align: center; }
+    .transition-bg {
+      background: linear-gradient(135deg, var(--bordeaux-deep) 0%, #5A1525 100%);
+      border-radius: 20px; padding: 56px 40px;
+      position: relative; overflow: hidden;
+    }
+    .transition-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+      background-size: 300px 300px; border-radius: 20px;
+    }
+    .transition-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 5vw, 2.1rem);
+      font-weight: 400; font-style: italic;
+      color: var(--cream); line-height: 1.5;
+      position: relative; z-index: 1;
+    }
+    .transition-quote-weight {
+      display: block; font-size: 1.2em;
+      font-weight: 500; letter-spacing: -0.01em;
+    }
+
+    /* ── WHAT HAPPENS ── */
+    #what-happens { padding-top: 64px; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 20px; display: block;
+    }
+    .steps-grid { display: flex; flex-direction: column; margin-top: 44px; }
+    .step-card {
+      display: grid; grid-template-columns: 40px 1fr; gap: 20px;
+      align-items: start; padding: 28px 0;
+      border-bottom: 1px solid rgba(180,120,120,0.15);
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .step-card.visible { opacity: 1; transform: translateY(0); }
+    .step-card:first-child { border-top: 1px solid rgba(180,120,120,0.15); }
+    .step-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem; font-weight: 300;
+      color: var(--rose-muted); line-height: 1; padding-top: 4px;
+    }
+    .step-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem; font-weight: 500;
+      color: var(--bordeaux-deep); margin-bottom: 6px;
+    }
+    .step-desc { font-size: 0.92rem; color: var(--text-light); line-height: 1.7; }
+
+    /* ── BOOKING ── */
+    #booking { padding-top: 60px; padding-bottom: 100px; }
+    .booking-header { text-align: center; margin-bottom: 36px; }
+    .booking-header h2 { margin-bottom: 16px; }
+    .booking-meta {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 8px; margin-bottom: 40px;
+    }
+    .booking-tag {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.92rem; font-style: italic;
+      color: var(--text-light);
+      padding: 5px 14px; border: 1px solid rgba(180,120,120,0.3);
+      border-radius: 100px; white-space: nowrap;
+    }
+    .cal-inline-wrap {
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(180,120,120,0.2);
+      background: var(--cream-dark);
+    }
+    .sign-off {
+      margin-top: 52px; text-align: center;
+      padding: 36px 0 0; border-top: 1px solid rgba(180,120,120,0.15);
+    }
+    .sign-off-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem; font-style: italic;
+      color: var(--text-body); margin-bottom: 10px;
+    }
+    .sign-off-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 500; color: var(--bordeaux-deep);
+    }
+
+    /* ── Footer ── */
+    footer { padding: 32px 0 48px; text-align: center; }
+    .footer-text { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.05em; }
+
+    /* ── Scroll progress ── */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--bordeaux-deep), var(--terracotta));
+      width: 0%; z-index: 100; transition: width 0.1s linear;
+    }
+
+    /* ── Reveals ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .pain-item:nth-child(1) { transition-delay: 0.0s; }
+    .pain-item:nth-child(2) { transition-delay: 0.08s; }
+    .pain-item:nth-child(3) { transition-delay: 0.16s; }
+    .pain-item:nth-child(4) { transition-delay: 0.24s; }
+    .pain-item:nth-child(5) { transition-delay: 0.32s; }
+    .step-card:nth-child(1) { transition-delay: 0.0s; }
+    .step-card:nth-child(2) { transition-delay: 0.1s; }
+    .step-card:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      section { padding: 60px 0; }
+      #hero { padding-top: 36px; padding-bottom: 72px; }
+      .transition-bg { padding: 44px 28px; border-radius: 16px; }
+      h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav container">
+    <span class="nav-name">Eliot · Mentorat</span>
+  </nav>
+
+  <!-- ① HERO -->
+  <section id="hero">
+    <div class="container">
+
+      <div class="hero-photo-wrap reveal">
+        <img src="eliot.jpg" alt="Eliot" class="hero-photo" width="112" height="112">
+      </div>
+
+      <span class="hero-eyebrow reveal">Appel Découverte — Sans Engagement</span>
+
+      <h1 class="hero-headline reveal">
+        Tu es entrepreneur.<br>
+        <em>Artiste.</em> Athlète.
+      </h1>
+
+      <p class="hero-sub reveal">
+        Et depuis trop longtemps, tu sens que tu te limites dans ce que tu es capable d'accomplir.
+      </p>
+
+      <button class="cta-btn reveal"
+        data-cal-link="eliot.vincent/appeldecouverte"
+        data-cal-namespace="appeldecouverte"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+        Réserve ton appel découverte
+        <span class="cta-arrow">→</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ② PAIN POINTS -->
+  <section id="pain">
+    <div class="container">
+      <p class="pain-intro">Tu te reconnais dans l'une de ces situations&nbsp;?</p>
+
+      <ul class="pain-list">
+        <li class="pain-item">
+          <span class="pain-dot"></span>
+          <span class="pain-text">Tu es conscient des blocages qui t'empêchent d'aller au bout de tes objectifs</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-dot"></span>
+          <span class="pain-text">Tu sens que ton potentiel est limité par une barrière invisible</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-dot"></span>
+          <span class="pain-text">Tu te retrouves constamment dans les mêmes mécanismes d'auto-sabotage</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-dot"></span>
+          <span class="pain-text">Tu ressens de la colère et de la honte de ne pas trouver de porte de sortie</span>
+        </li>
+        <li class="pain-item">
+          <span class="pain-dot"></span>
+          <span class="pain-text">Tu as peur de ne jamais atteindre la vie dont tu rêves</span>
+        </li>
+      </ul>
+
+      <div class="nudge-line reveal">
+        <p class="nudge-text">Tu sens qu'il est temps de te lancer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ TRANSITION -->
+  <section id="transition-line">
+    <div class="container">
+      <div class="transition-bg">
+        <p class="transition-quote">
+          "Je t'aide à débloquer<br>
+          <span class="transition-quote-weight">toute ta capacité d'action."</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ WHAT HAPPENS -->
+  <section id="what-happens">
+    <div class="container">
+      <span class="section-label reveal">Pendant l'appel</span>
+      <h2 class="reveal">Ce qu'on va construire ensemble</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <div class="step-body">
+            <p class="step-title">Définir tes objectifs</p>
+            <p class="step-desc">On prend le temps de nommer ce que tu veux vraiment atteindre — sans filtre, sans jugement.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <div class="step-body">
+            <p class="step-title">Voir comment la méthode s'applique</p>
+            <p class="step-desc">Je te montre concrètement comment la méthodologie peut transformer ta situation spécifique.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <div class="step-body">
+            <p class="step-title">Décider ensemble de la suite</p>
+            <p class="step-desc">On s'assure que l'accompagnement est la prochaine étape qui a le plus de sens pour toi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ BOOKING -->
+  <section id="booking">
+    <div class="container">
+
+      <div class="booking-header reveal">
+        <h2>Réserve le créneau qui te convient.</h2>
+      </div>
+
+      <div class="booking-meta reveal">
+        <span class="booking-tag">30 min</span>
+        <span class="booking-tag">Tes objectifs</span>
+        <span class="booking-tag">Ma méthode</span>
+        <span class="booking-tag">Une rencontre</span>
+      </div>
+
+      <div class="cal-inline-wrap reveal">
+        <div style="width:100%;height:100%;overflow:scroll;min-height:600px" id="my-cal-inline-appeldecouverte"></div>
+      </div>
+
+      <div class="sign-off reveal">
+        <p class="sign-off-text">Hâte de te rencontrer</p>
+        <p class="sign-off-name">Eliot</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="footer-text">© 2026 Eliot · Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll progress bar
+    const bar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const max = document.body.scrollHeight - window.innerHeight;
+      bar.style.width = (window.scrollY / max * 100) + '%';
+    }, { passive: true });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .pain-item, .step-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+  <!-- Cal.com inline calendar embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
+    Cal.ns.appeldecouverte("inline", {
+      elementOrSelector: "#my-cal-inline-appeldecouverte",
+      config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+      calLink: "eliot.vincent/appeldecouverte",
+    });
+    Cal.ns.appeldecouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
+</body>
+</html>
