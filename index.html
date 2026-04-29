@@ -23,6 +23,20 @@
     Cal.ns.appeldecouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   </script>
 
+  <template id="__bundler_thumbnail" data-bg-color="#FAF5F0">
+    <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="600" fill="#FAF5F0"/>
+      <circle cx="200" cy="110" r="48" fill="#D4A5A5" opacity="0.5"/>
+      <rect x="80" y="178" width="240" height="18" rx="4" fill="#6B1E2E" opacity="0.8"/>
+      <rect x="100" y="204" width="200" height="18" rx="4" fill="#6B1E2E" opacity="0.6"/>
+      <rect x="60" y="240" width="280" height="10" rx="3" fill="#9C7070" opacity="0.5"/>
+      <rect x="110" y="286" width="180" height="36" rx="18" fill="#6B1E2E"/>
+      <rect x="40" y="480" width="320" height="80" rx="14" fill="#6B1E2E"/>
+      <rect x="80" y="506" width="240" height="14" rx="3" fill="#FAF5F0" opacity="0.6"/>
+      <rect x="60" y="528" width="280" height="18" rx="3" fill="#FAF5F0" opacity="0.85"/>
+    </svg>
+  </template>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -140,6 +154,10 @@
       color: var(--text-dark);
     }
 
+    .hero-body p.emphasis-lg {
+      font-size: 1.35rem;
+    }
+
     /* ── CTA Button ── */
     .cta-btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -175,7 +193,11 @@
       color: var(--cream); line-height: 1.8;
       position: relative; z-index: 1;
     }
-    .transition-quote strong { font-weight: 600; font-style: italic; }
+
+    .transition-quote strong {
+      font-weight: 600;
+      font-style: italic;
+    }
 
     /* ── BOOKING ── */
     #booking { padding-top: 0; padding-bottom: 100px; }
@@ -215,6 +237,20 @@
       border-radius: 16px; overflow: hidden;
       border: 1px solid rgba(180,120,120,0.2);
       background: var(--cream-dark);
+    }
+
+    .sign-off {
+      margin-top: 52px; text-align: center;
+      padding: 36px 0 0; border-top: 1px solid rgba(180,120,120,0.15);
+    }
+    .sign-off-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem; font-style: italic;
+      color: var(--text-body); margin-bottom: 10px;
+    }
+    .sign-off-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem; font-weight: 500; color: var(--bordeaux-deep);
     }
 
     /* ── Footer ── */
@@ -264,12 +300,13 @@
         <img src="eliot.jpg" alt="Eliot" class="hero-photo" width="112" height="112" />
       </div>
 
-      <span class="hero-eyebrow reveal">Pour les entrepreneurs, les artistes, les athlètes… et tous ceux qui portent une mission plus grande qu'eux.</span>
+      <span class="hero-eyebrow reveal">Pour les entrepreneurs, les artistes, les athlètes… les ambitieux qui ont tout essayé.</span>
 
       <h1 class="hero-headline reveal">
-        T'as pas à choisir entre performer<br />
-        et te sentir vivant.<br />
-        <em>Tu peux avoir les deux.</em>
+        T'as déjà fait la thérapie.<br />
+        Les livres. Les coachs.<br />
+        Tu sais exactement d'où ça vient.<br />
+        <em>Et pourtant rien n'a bougé.</em>
       </h1>
 
       <button
@@ -284,18 +321,18 @@
       </button>
 
       <div class="hero-body">
-        <p class="reveal">T'es entrepreneur, artiste, athlète. Fondateur, créateur, visionnaire. Tu portes une mission plus grande que toi — et tu le sais. Tu veux laisser ta marque. Tu sais que t'es capable d'aller loin. Et t'as pas l'intention de passer à côté.</p>
+        <p class="reveal">T'as déjà accompli des choses dont tu es fier. Mais tu ne progresses plus.<br />Tu tournes en rond avec les mêmes problématiques. Tu sens que tu gâches le potentiel et l'impact que tu pourrais avoir.</p>
 
-        <p class="reveal reveal-delay-1">Sauf que depuis un moment, t'es bloqué.</p>
+        <p class="emphasis reveal reveal-delay-1">Tu es conscient de tes blocages. Mais t'arrives pas à les traverser.</p>
 
-        <p class="reveal reveal-delay-2">T'as déjà accompli des choses dont tu es fier. Mais tu ne progresses plus. Tu tournes en rond avec les mêmes problématiques. Tu sens que tu gâches le potentiel et l'impact que tu pourrais avoir. T'as investi dans de la thérapie, des coachs, des livres, des formations — et ça t'a fait évoluer. Mais il y a toujours cette distance. Entre ce que tu es et ce que tu voudrais être. Entre ce que tu fais et ce que tu sais être capable de faire.</p>
+        <p class="reveal reveal-delay-2">T'as fait le travail sur toi, et ça t'a fait évoluer. Mais il y a toujours cette distance entre ce que tu es et ce que tu voudrais être. Entre ce que tu fais et ce que tu sais être capable de faire.</p>
 
-        <p class="emphasis reveal reveal-delay-3">Tu es conscient de tes blocages. Mais t'arrives pas à les traverser.</p>
+        <p class="emphasis reveal reveal-delay-3">Tu sais que t'es capable d'aller loin. Et t'as pas l'intention de passer à côté.</p>
 
-        <p class="reveal reveal-delay-4">La frustration et la colère commencent à prendre le dessus sur la joie et le plaisir. Tu te retrouves à saboter ce qui pourrait te sortir de là. À trouver toutes les excuses pour ne pas pousser plus loin. Alors qu'au fond — tu sais que c'est exactement la direction que tu dois prendre.</p>
-
-        <p class="emphasis reveal reveal-delay-5">Tu sens qu'il est temps.</p>
+        <p class="reveal reveal-delay-4">La frustration et la colère commencent à prendre le dessus sur la joie et le plaisir.<br />Et tu continues de saboter ce qui pourrait te sortir de là.<br />À trouver toutes les excuses pour ne pas pousser plus loin.<br />Alors qu'au fond, tu sais que c'est exactement la direction que tu dois prendre.</p>
       </div>
+
+
 
     </div>
   </section>
@@ -306,9 +343,10 @@
       <div class="transition-bg reveal">
         <p class="transition-quote">
           "Je t'aide à retrouver toute ta <strong>capacité d'action</strong>.<br />
-          Une direction claire.<br />
-          Et surtout — l'<strong>enthousiasme</strong> de faire face à chaque étape<br />
-          vers ce que tu veux vraiment accomplir."
+          Et surtout l'<strong>enthousiasme</strong> de faire face à chaque étape vers ce que tu veux vraiment accomplir.<br />
+          Pas avec plus d'analyse et de compréhension.<br />
+          Mais directement par le corps. L'expérience.<br />
+          La seule manière de se <strong>transformer</strong>."
         </p>
       </div>
     </div>
@@ -319,12 +357,13 @@
     <div class="container">
 
       <div class="booking-header reveal">
-        <h2>En 30 minutes, tu auras une vision claire de ce qui te bloque vraiment. Pas le symptôme.<br />Ce qui est en dessous.<br />Et tu sauras si on doit travailler ensemble.</h2>
+        <h2>En 30 minutes, tu auras une vision claire de ce qui te bloque vraiment. Pas le symptôme.<br />Ce qui se cache en dessous.<br />Et tu sauras si on doit travailler ensemble.</h2>
       </div>
 
-      <span class="booking-sub-italic reveal">Si tu te reconnais dans ce que je viens de dire — c'est probablement pour toi.</span>
+      <span class="booking-sub-italic reveal">Si tu te reconnais dans ce que je viens de décrire, c'est probablement pour toi.</span>
 
       <span class="booking-choose reveal">Choisis ton créneau.</span>
+
 
       <div class="booking-meta reveal">
         <span class="booking-tag">30 min</span>
@@ -337,6 +376,8 @@
         <div style="width:100%;height:100%;overflow:scroll;min-height:600px" id="my-cal-inline-appeldecouverte"></div>
       </div>
 
+
+
     </div>
   </section>
 
@@ -347,12 +388,14 @@
   </footer>
 
   <script>
+    // Scroll progress
     const bar = document.getElementById('scrollProgress');
     window.addEventListener('scroll', () => {
       const max = document.body.scrollHeight - window.innerHeight;
       bar.style.width = (window.scrollY / max * 100) + '%';
     }, { passive: true });
 
+    // Intersection observer reveals
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
