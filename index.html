@@ -8,14 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- Cal element-click embed -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
-    Cal.ns.appeldecouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
-
-  <!-- Cal floating-popup embed -->
   <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
     Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
@@ -48,12 +40,9 @@
       font-weight: 300;
       line-height: 1.75;
       min-height: 100vh;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      background-size: 300px 300px;
     }
 
     .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 80px 0; }
 
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -66,7 +55,7 @@
 
     h2 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
       font-weight: 400;
       line-height: 1.3;
       color: var(--bordeaux-deep);
@@ -74,10 +63,10 @@
 
     h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-size: clamp(1.15rem, 2.8vw, 1.4rem);
       font-weight: 500;
       color: var(--bordeaux-deep);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     /* ── Nav ── */
@@ -90,96 +79,51 @@
     }
 
     /* ── HERO ── */
-    #hero {
-      padding-top: 48px; padding-bottom: 80px;
-      position: relative; overflow: hidden;
-    }
-    #hero::before {
-      content: ''; position: absolute;
-      top: -120px; right: -80px;
-      width: 340px; height: 340px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(139,38,53,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    #hero { padding: 48px 0 80px; }
 
-    /* ── Photo ── */
     .hero-photo-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
     .hero-photo {
-      width: 112px; height: 112px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: 50% 18%;
+      width: 112px; height: 112px; border-radius: 50%;
+      object-fit: cover; object-position: 50% 18%;
       filter: saturate(0.9) brightness(1.02);
-      display: block;
       mask-image: radial-gradient(circle at center, black 58%, transparent 100%);
       -webkit-mask-image: radial-gradient(circle at center, black 58%, transparent 100%);
     }
 
-    /* ── Accroche ── */
-    .hero-accroche {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
-      font-weight: 400;
-      color: var(--bordeaux-deep);
-      line-height: 1.25;
-      margin-bottom: 28px;
-      display: block;
-      letter-spacing: -0.01em;
-    }
-
-    /* ── Sub H1 ── */
-    .hero-sub-h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--bordeaux-deep);
-      line-height: 1.35;
-      margin-bottom: 8px;
-    }
-
-    /* ── Eyebrow ── */
     .hero-eyebrow {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.78rem; font-weight: 400;
       letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--terracotta); margin-bottom: 24px; display: block;
-    }
-
-    .hero-eyebrow-2-inline {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72rem; font-weight: 400;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      font-style: normal;
-      color: var(--text-light);
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 8px;
+      color: var(--terracotta); margin-bottom: 20px; display: block;
     }
 
     .hero-eyebrow-2 {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.78rem; font-weight: 400;
+      font-size: 0.72rem; font-weight: 400;
       letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--text-light); margin-bottom: 36px; display: block;
+      color: var(--text-light); margin-top: 18px; margin-bottom: 36px; display: block;
     }
 
-    /* ── Headline ── */
-    .hero-headline { margin-bottom: 36px; }
+    .hero-headline { margin-bottom: 6px; }
     .hero-headline em { font-style: italic; color: var(--bordeaux-light); }
+
+    .hero-sub-h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      font-weight: 400; font-style: italic;
+      color: var(--bordeaux-deep);
+      line-height: 1.35; margin-top: 8px;
+    }
 
     /* ── Callout ── */
     .hero-callout {
       background: linear-gradient(135deg, rgba(107,30,46,0.07) 0%, rgba(196,114,74,0.06) 100%);
       border-left: 3px solid var(--bordeaux-light);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin: 0 -8px 40px;
+      border-radius: 12px; padding: 24px 28px;
+      margin: 28px 0;
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.2rem, 3vw, 1.45rem);
-      font-style: italic;
-      color: var(--text-dark);
-      line-height: 1.8;
+      font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+      font-style: italic; color: var(--text-dark); line-height: 1.8;
     }
 
     /* ── CTA Button ── */
@@ -194,276 +138,124 @@
       box-shadow: 0 4px 20px rgba(107,30,46,0.22);
     }
     .cta-btn:hover { background: var(--bordeaux-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(107,30,46,0.3); }
-    .cta-btn:active { transform: translateY(0); }
     .cta-arrow { transition: transform 0.2s ease; }
     .cta-btn:hover .cta-arrow { transform: translateX(3px); }
 
-    /* ── Body paragraphs ── */
-    .hero-body {
-      margin-bottom: 44px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .hero-body p {
-      font-size: 1rem;
-      color: var(--text-body);
-      line-height: 1.85;
-    }
-
+    /* ── Body ── */
+    .hero-body { display: flex; flex-direction: column; gap: 18px; margin-top: 40px; }
+    .hero-body p { font-size: 1rem; color: var(--text-body); line-height: 1.85; }
     .hero-body p.emphasis {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.25rem, 3vw, 1.5rem);
-      font-style: italic;
-      color: var(--text-dark);
+      font-size: clamp(1.2rem, 3vw, 1.4rem); font-style: italic; color: var(--text-dark);
+    }
+    .hero-body p.closing {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-style: italic; color: var(--bordeaux-deep);
     }
 
-    /* ── Context highlights ── */
-    strong.highlight {
-      font-weight: 500;
-      color: var(--bordeaux-deep);
-    }
-
-    .context-divider {
-      border: none;
-      border-top: 1px solid rgba(180,120,120,0.18);
-      margin: 40px 0;
-    }
+    strong.highlight { font-weight: 500; color: var(--bordeaux-deep); }
 
     /* ── QUOTE BLOCK ── */
-    #transition-line { padding: 0 0 80px; }
-    .transition-bg {
+    .quote-section { padding: 0 0 80px; }
+    .quote-bg {
       background: linear-gradient(135deg, var(--bordeaux-deep) 0%, #5A1525 100%);
-      border-radius: 20px; padding: 56px 44px;
-      position: relative; overflow: hidden;
+      border-radius: 20px; padding: 52px 44px; position: relative; overflow: hidden;
     }
-    .transition-bg::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-      background-size: 300px 300px; border-radius: 20px;
-    }
-    .transition-quote {
+    .quote-text {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.3rem, 4vw, 1.75rem);
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
       font-weight: 400; font-style: italic;
-      color: var(--cream); line-height: 1.8;
-      position: relative; z-index: 1;
-    }
-    .transition-quote strong {
-      font-weight: 600;
-      font-style: italic;
+      color: var(--cream); line-height: 1.8; position: relative; z-index: 1;
     }
 
-    /* ── SECTIONS GÉNÉRALES ── */
-    .content-section { padding: 0 0 80px; }
+    /* ── SECTIONS ── */
+    .content-section { padding: 0 0 72px; }
 
     .section-label {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.72rem; font-weight: 500;
       letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--terracotta);
-      display: block;
-      margin-bottom: 28px;
+      color: var(--terracotta); display: block; margin-bottom: 24px;
     }
 
-    .prose {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .prose p {
-      font-size: 1rem;
-      color: var(--text-body);
-      line-height: 1.85;
-    }
-
+    .prose { display: flex; flex-direction: column; gap: 16px; }
+    .prose p { font-size: 1rem; color: var(--text-body); line-height: 1.85; }
     .prose p.em {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.2rem, 3vw, 1.4rem);
-      font-style: italic;
-      color: var(--text-dark);
+      font-size: clamp(1.15rem, 2.8vw, 1.35rem); font-style: italic; color: var(--text-dark);
     }
 
-    /* ── DIVISEUR ── */
-    .divider {
-      border: none;
-      border-top: 1px solid rgba(180,120,120,0.18);
-      margin: 0 0 80px;
+    .context-divider { border: none; border-top: 1px solid rgba(180,120,120,0.18); margin: 36px 0; }
+
+    /* ── Bloc court ── */
+    .short-bloc {
+      background: rgba(242,234,225,0.5);
+      border: 1px solid rgba(180,120,120,0.2);
+      border-radius: 16px; padding: 32px 36px;
+      margin-bottom: 72px;
     }
+    .short-bloc p { font-size: 1rem; color: var(--text-body); line-height: 1.85; margin-bottom: 12px; }
+    .short-bloc-link {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem; font-style: italic;
+      color: var(--bordeaux-mid); text-decoration: none;
+      border-bottom: 1px solid rgba(139,38,53,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s ease;
+    }
+    .short-bloc-link:hover { color: var(--bordeaux-deep); }
 
     /* ── ÉTAPES ── */
-    .steps { display: flex; flex-direction: column; gap: 36px; margin-top: 36px; }
+    .steps { display: flex; flex-direction: column; gap: 28px; margin-top: 28px; }
+    .step { padding: 28px 32px; border: 1px solid rgba(180,120,120,0.2); border-radius: 16px; background: rgba(242,234,225,0.4); }
+    .step-number { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 8px; }
+    .step p { font-size: 0.97rem; color: var(--text-body); line-height: 1.85; }
+    .step-note { margin-top: 12px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.97rem; font-style: italic; color: var(--text-light); }
 
-    .step {
-      padding: 28px 32px;
-      border: 1px solid rgba(180,120,120,0.2);
-      border-radius: 16px;
-      background: rgba(242,234,225,0.4);
-    }
-
-    .step-number {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--terracotta);
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .step h3 { margin-bottom: 12px; }
-
-    .step p {
-      font-size: 0.97rem;
-      color: var(--text-body);
-      line-height: 1.85;
-    }
-
-    .step-tools {
-      margin-top: 14px;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--text-light);
-    }
+    .step-tools { margin-top: 36px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; font-style: italic; color: var(--text-light); line-height: 1.8; }
 
     /* ── DÉTAILS ── */
-    .details-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      margin-top: 28px;
-    }
+    .details-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+    .details-block-title { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bordeaux-deep); display: block; margin-bottom: 10px; }
+    .details-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .details-list li { font-size: 0.97rem; color: var(--text-body); line-height: 1.75; padding-left: 20px; position: relative; }
+    .details-list li::before { content: '●'; position: absolute; left: 0; color: var(--bordeaux-light); font-size: 0.6rem; top: 6px; }
+    .durations { display: flex; flex-wrap: wrap; gap: 10px; }
+    .duration-tag { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; font-style: italic; color: var(--text-dark); padding: 6px 18px; border: 1px solid rgba(180,120,120,0.35); border-radius: 100px; }
 
-    .details-block {}
-
-    .details-block-title {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--bordeaux-deep);
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .details-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .details-list li {
-      font-size: 0.97rem;
-      color: var(--text-body);
-      line-height: 1.75;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .details-list li::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: var(--bordeaux-light);
-      font-size: 0.6rem;
-      top: 6px;
-    }
-
-    .durations {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .duration-tag {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--text-dark);
-      padding: 6px 18px;
-      border: 1px solid rgba(180,120,120,0.35);
-      border-radius: 100px;
-    }
+    /* ── DIVISEUR ── */
+    .divider { border: none; border-top: 1px solid rgba(180,120,120,0.18); margin: 0 0 72px; }
 
     /* ── BOOKING ── */
-    #booking { padding-top: 0; padding-bottom: 100px; }
+    #booking { padding: 0 0 100px; }
+    .booking-sub { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--text-light); margin-bottom: 28px; display: block; }
+    .booking-choose { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 400; color: var(--bordeaux-deep); margin-bottom: 24px; display: block; }
+    .booking-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .booking-tag { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.92rem; font-style: italic; color: var(--text-light); padding: 5px 14px; border: 1px solid rgba(180,120,120,0.3); border-radius: 100px; }
+    .cal-inline-wrap { border-radius: 16px; overflow: hidden; border: 1px solid rgba(180,120,120,0.2); background: var(--cream-dark); }
 
-    .booking-sub-italic {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.25rem; font-style: italic;
-      color: var(--text-light);
-      margin-bottom: 36px;
-      display: block;
-    }
-
-    .booking-choose {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem; font-weight: 400;
-      color: var(--bordeaux-deep);
-      margin-bottom: 28px;
-      display: block;
-    }
-
-    .booking-meta {
-      display: flex; justify-content: flex-start;
-      flex-wrap: wrap; gap: 8px; margin-bottom: 40px;
-    }
-    .booking-tag {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 0.92rem; font-style: italic;
-      color: var(--text-light);
-      padding: 5px 14px; border: 1px solid rgba(180,120,120,0.3);
-      border-radius: 100px; white-space: nowrap;
-    }
-
-    .cal-inline-wrap {
-      border-radius: 16px; overflow: hidden;
-      border: 1px solid rgba(180,120,120,0.2);
-      background: var(--cream-dark);
-    }
-
-    .sign-off {
-      margin-top: 52px; text-align: center;
-      padding: 36px 0 0; border-top: 1px solid rgba(180,120,120,0.15);
-    }
-    .sign-off-text {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.25rem; font-style: italic;
-      color: var(--text-body); margin-bottom: 10px;
-    }
-    .sign-off-name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem; font-weight: 500; color: var(--bordeaux-deep);
-    }
+    /* ── Long blocs ── */
+    .long-bloc-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 1.9rem); font-weight: 400; color: var(--bordeaux-deep); margin-bottom: 32px; display: block; }
 
     /* ── Footer ── */
     footer { padding: 32px 0 48px; text-align: center; }
-    .footer-text { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.05em; }
+    .footer-text { font-size: 0.78rem; color: var(--text-light); }
 
     /* ── Scroll progress ── */
-    .scroll-progress {
-      position: fixed; top: 0; left: 0; height: 2px;
-      background: linear-gradient(90deg, var(--bordeaux-deep), var(--terracotta));
-      width: 0%; z-index: 100; transition: width 0.1s linear;
-    }
-
-    /* ── Mobile ── */
-    @media (max-width: 480px) {
-      section { padding: 60px 0; }
-      #hero { padding-top: 36px; padding-bottom: 60px; }
-      .transition-bg { padding: 44px 28px; border-radius: 16px; }
-      h1 { font-size: 1.9rem; }
-      .step { padding: 22px 20px; }
-    }
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--bordeaux-deep), var(--terracotta)); width: 0%; z-index: 100; }
 
     /* ── Reveals ── */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    @media (max-width: 480px) {
+      #hero { padding: 36px 0 60px; }
+      .quote-bg { padding: 40px 24px; border-radius: 16px; }
+      .step { padding: 22px 20px; }
+      .short-bloc { padding: 24px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -482,18 +274,14 @@
         <img src="eliot.jpg" alt="Eliot" class="hero-photo" width="112" height="112" />
       </div>
 
-      <span class="hero-eyebrow reveal">Pour les entrepreneurs, les artistes, les coachs… les ambitieux créatifs qui ont tout essayé.</span>
+      <span class="hero-eyebrow reveal">Pour les ambitieux qui ont construit quelque chose de solide, mais pour qui à l'intérieur, ça ne sonne pas juste.</span>
 
-      <div class="hero-headline-block reveal">
+      <div class="reveal">
         <h1 class="hero-headline">
-          Apprends à exister <em>sans masque.</em><br />
-          Crée une vie qui ne fait aucun doute.
+          Tu sens que c'est le moment de <em>faire tomber le masque.</em>
         </h1>
-        <span class="hero-eyebrow-2-inline">Un travail 1:1 en profondeur, par le corps, sur le long terme.</span>
-      </div>
-
-      <div class="hero-callout reveal">
-        En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment. Pas le symptôme. Ce qui est en dessous. C'est le début du travail, un avant-goût de ce qu'on peut transformer ensemble.
+        <p class="hero-sub-h1">Tu es prêt à construire une vie qui ne fait aucun doute pour toi.</p>
+        <span class="hero-eyebrow-2">Un accompagnement personnalisé 1:1 sur le long terme.</span>
       </div>
 
       <button
@@ -501,56 +289,183 @@
         data-cal-link="eliot.vincent/appeldecouverte"
         data-cal-namespace="appeldecouverte"
         data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-        style="margin-bottom: 44px;"
       >
         Réserve ton appel découverte
         <span class="cta-arrow">→</span>
       </button>
 
+      <div class="hero-callout reveal">
+        En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment, et une réelle expérience du travail qu'on peut réaliser ensemble.
+      </div>
+
       <div class="hero-body">
-        <p class="hero-sub-h1 reveal" style="color: var(--bordeaux-deep); font-size: clamp(1.4rem, 3.5vw, 1.9rem); font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; line-height: 1.35; margin-bottom: 8px;">T'as construit quelque chose de solide. Mais à l'intérieur, ça ne sonne pas juste.</p>
-        <p class="emphasis reveal">Il y a quelque chose que tu veux vraiment : un projet, une direction, <strong class="highlight">une façon d'exister dans ton travail ou ta vie personnelle,</strong> et tu n'arrives pas encore à <strong class="highlight">te l'autoriser.</strong></p>
 
-        <p class="reveal">T'as accompli des choses dont tu es fier. Mais tu sais que tu es arrivé jusqu'ici en jouant <strong class="highlight">un rôle qui ne te convient plus.</strong> Aujourd'hui, tu te sens bloqué dans cette version de toi qui ne te permet pas de <strong class="highlight">te sentir exactement à ta place.</strong></p>
+        <p class="reveal">Il y a quelque chose que tu veux vraiment : un projet, une direction, <strong class="highlight">une façon d'exister dans ton travail ou ta vie personnelle,</strong> et tu n'arrives pas encore à <strong class="highlight">te l'autoriser.</strong></p>
 
-        <p class="reveal reveal-delay-1">T'as déjà fait un travail sur toi. La thérapie. Les livres. Les coachings. Ça t'a fait évoluer, mais il reste <strong class="highlight">cette distance entre ce que tu es et ce que tu veux vraiment créer, faire ou devenir.</strong></p>
+        <p class="reveal">Au fond, tu sais exactement où tu dois aller, mais <strong class="highlight">tu continues de te saboter.</strong></p>
 
-        <p class="reveal reveal-delay-2">La frustration commence à prendre plus de place que la joie. Et quelque part, <strong class="highlight">tu continues de te saboter.</strong> Même si au fond, tu sais exactement où tu dois aller.</p>
+        <p class="reveal reveal-delay-1">Tu es fier de ce que t'as accompli, mais t'es arrivé jusqu'ici en jouant <strong class="highlight">un rôle que tu ne veux plus jouer.</strong> Cette version de toi est peut-être capable et pleine de ressources, mais elle ne te permet pas de créer une vie dans laquelle tu te sens <strong class="highlight">apaisé et aligné.</strong></p>
+
+        <p class="reveal reveal-delay-1">T'as déjà fait un travail sur toi. La thérapie. Les livres. Les coachings. Ça t'a fait évoluer, mais il reste <strong class="highlight">cette distance entre ce que tu es et ce que tu veux vraiment vivre.</strong></p>
+
+        <p class="reveal reveal-delay-2">La frustration a pris plus de place que la joie. La douleur de ne pas pouvoir te connecter au monde librement est maintenant plus grande que le sentiment de sécurité que ce rôle t'apporte.</p>
+
+        <p class="closing reveal reveal-delay-2">Tu sens qu'il n'y a plus d'autre choix que de faire tomber le masque.</p>
+
       </div>
 
     </div>
   </section>
 
-  <!-- ② QUOTE BLOCK -->
-  <section id="transition-line">
-    <div class="container">
-      <div class="transition-bg reveal">
-        <p class="transition-quote">
-          "Je t'aide à retrouver toute ta <strong>capacité d'action</strong> vers ce qui compte vraiment.<br />
-          Et surtout l'<strong>enthousiasme</strong> de le poursuivre.<br />
-          Pas avec plus d'analyse et de compréhension.<br />
-          Mais directement par le corps. L'expérience.<br />
-          La seule manière de se <strong>transformer</strong>."
-        </p>
-      </div>
+  <!-- ② QUOTE -->
+  <div class="quote-section container">
+    <div class="quote-bg reveal">
+      <p class="quote-text">
+        "Je t'aide à poursuivre le projet que tu n'arrives pas encore à t'autoriser.<br />
+        Celui qui te fait sentir à la fois libre et accompli."
+      </p>
     </div>
-  </section>
+  </div>
 
-  <!-- ③ CONTEXTE -->
+  <!-- ③ CONTEXTE COURT -->
+  <div class="container">
+    <div class="short-bloc reveal">
+      <span class="section-label" style="margin-bottom: 16px;">Un peu de contexte</span>
+      <p>J'ai passé la majeure partie de ma vie à jouer un rôle, sans même le savoir.</p>
+      <p>Celui de l'invisible. Celui qui ne pèse pas. Celui qui s'adapte pour ne jamais risquer de perdre l'amour de ceux qui l'entourent.</p>
+      <p>C'est le métier d'acteur qui m'a permis de voir ce mécanisme en face. Et de le guérir.</p>
+      <a href="#contexte-long" class="short-bloc-link">Plus de détails ↓</a>
+    </div>
+  </div>
+
+  <!-- ④ CE QUE C'EST -->
   <div class="container">
     <div class="content-section">
+      <span class="section-label reveal">Ce que c'est</span>
+      <div class="prose reveal">
+        <p>Ce travail, c'est de la transformation intérieure. Pas un cours. Pas une formation. Pas du coaching qui s'arrête aux comportements, aux stratégies ou à la connaissance.</p>
+        <p>On vient ensemble reprogrammer ce qui a été inscrit dans ton inconscient. Ce qui a conditionné et dirigé ta vie jusqu'à maintenant. On va à la rencontre des parts de toi qui ont créé ce masque. On leur montre qu'il est possible aujourd'hui d'exister sans lui.</p>
+      </div>
+    </div>
+  </div>
 
-      <span class="section-label reveal">Un peu de contexte</span>
+  <hr class="divider container" />
+
+  <!-- ⑤ ÉTAPES -->
+  <div class="container">
+    <div class="content-section">
+      <span class="section-label reveal">Ce sur quoi on va travailler, par étape</span>
+
+      <div class="steps">
+
+        <div class="step reveal">
+          <span class="step-number">01</span>
+          <h3>Révéler</h3>
+          <p>Identifier et clarifier le rôle que ton toi du passé a défini comme la meilleure stratégie pour survivre. D'où il vient, pourquoi il existe, quelle est son histoire. Les croyances associées, les émotions, les peurs.</p>
+          <p class="step-note">→ Cette étape seule crée un mouvement naturel de transformation. Elle change radicalement la perspective sur soi-même et sur ce qui a dirigé ta vie jusqu'à maintenant.</p>
+        </div>
+
+        <div class="step reveal">
+          <span class="step-number">02</span>
+          <h3>Explorer et transformer</h3>
+          <p>On rentre dans le vif du sujet. Plus qu'une histoire de compréhension, une histoire de sensations, d'émotions. On utilise des outils proches de l'hypnothérapie, directement liés au travail d'acteur. On crée un mouvement physique et émotionnel. On permet aux émotions bloquées de circuler et de s'exprimer.</p>
+          <p class="step-note">→ La compassion et la bienveillance est la clé pour permettre au masque de tomber.</p>
+        </div>
+
+        <div class="step reveal">
+          <span class="step-number">03</span>
+          <h3>Ancrer</h3>
+          <p>Dans cette dernière étape, on solidifie la transformation. On fait de ce nouveau système de direction le plus familier : au niveau rationnel, émotionnel et corporel. Les projets que tu poursuis, les relations que tu construis, les environnements que tu choisis s'alignent progressivement avec la version de toi la plus libre et apaisée. C'est là que ta vie commence à ne faire plus aucun doute pour toi.</p>
+          <p class="step-note">→ Tu redeviens, d'une certaine façon, comme un enfant dans sa capacité à jouer, à être présent, à s'exprimer pleinement en toute circonstance.</p>
+        </div>
+
+      </div>
+
+      <p class="step-tools reveal">Mon travail se trouve à la croisée entre psychologie, créativité et spiritualité. J'utilise des outils comme l'IFS (Internal Family System), la méditation, la thérapie cognitive, et une collection d'outils développés au fil des années en tant que mentor, et directement inspirés du travail de l'acteur.</p>
+
+    </div>
+  </div>
+
+  <hr class="divider container" />
+
+  <!-- ⑥ DÉTAILS -->
+  <div class="container">
+    <div class="content-section">
+      <span class="section-label reveal">Les détails</span>
+      <p class="reveal" style="margin-bottom: 28px;">Ce mentorat est intensif et sur le long terme. La durée dépend de où tu en es dans ce processus, du travail accompli, et de tes besoins.</p>
+
+      <div class="details-grid">
+
+        <div class="reveal">
+          <span class="details-block-title">Durée</span>
+          <div class="durations">
+            <span class="duration-tag">8 semaines</span>
+            <span class="duration-tag">16 semaines</span>
+            <span class="duration-tag">24 semaines</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="details-block-title">Format</span>
+          <ul class="details-list">
+            <li>Une session de 90 minutes toutes les deux semaines, pour laisser l'espace à la vie de se faufiler entre les sessions, et venir expérimenter dans le réel ce qu'on travaille ensemble. C'est là que les vrais changements peuvent être intégrés.</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <span class="details-block-title">Entre les sessions</span>
+          <ul class="details-list">
+            <li>On reste en contact tout au long de l'accompagnement, par message et vocal. Tout ce que tu traverses (les avancées comme les moments difficiles) peut être partagé.</li>
+            <li>Des exercices d'intégration personnalisés, construits autour de ton histoire et de ce que tu traverses spécifiquement. Pas quelque chose de générique, mais calibré exactement pour toi.</li>
+            <li>Un call d'urgence de 30 minutes est possible si tu en ressens vraiment le besoin : partager ce qui se passe et avoir un retour direct de ma part.</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <span class="details-block-title">Prix</span>
+          <ul class="details-list">
+            <li>En fonction de la durée d'engagement choisie, nous discutons de l'investissement pendant l'appel découverte.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑦ BOOKING -->
+  <section id="booking">
+    <div class="container">
+      <span class="booking-sub reveal">Si tu te reconnais dans ce que je viens de décrire, c'est probablement pour toi.</span>
+      <span class="booking-choose reveal">Choisis ton créneau.</span>
+      <div class="booking-meta reveal">
+        <span class="booking-tag">45 min</span>
+        <span class="booking-tag">Tes objectifs</span>
+        <span class="booking-tag">Ma méthode</span>
+        <span class="booking-tag">Une rencontre</span>
+      </div>
+      <div class="cal-inline-wrap reveal">
+        <div style="width:100%;min-height:600px" id="my-cal-inline"></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider container" />
+
+  <!-- ⑧ CONTEXTE LONG -->
+  <div class="container" id="contexte-long">
+    <div class="content-section">
+
+      <span class="long-bloc-title reveal">Un peu de contexte</span>
 
       <div class="prose reveal">
         <p>J'ai commencé très tôt à chercher à <strong class="highlight">contrôler qui j'étais.</strong></p>
         <p>Pas consciemment. C'est ce que font les enfants quand ils associent le fait d'être pleinement eux-mêmes à des expériences de <strong class="highlight">honte, de peur, d'humiliation, de trahison,</strong> ou au sentiment de n'avoir aucune valeur. Le corps enregistre. Et il trouve une stratégie.</p>
         <p>La mienne : <strong class="highlight">devenir invisible.</strong> Ne peser sur personne. Être suffisamment adaptable, suffisamment malléable, pour ne jamais risquer d'être abandonné ou de perdre l'amour de ceux qui m'entouraient.</p>
         <p>Quoi de mieux, pour ça, que de devenir acteur.</p>
-        <p>Le métier d'acteur était l'outil parfait pour jouer avec les rôles, adapter ma personnalité, mes émotions, mes comportements en fonction des situations — <strong class="highlight">du pur contrôle.</strong> Ce que j'ignorais, c'est que c'est exactement ce même métier qui allait me permettre de voir ce mécanisme en face, et de le guérir.</p>
+        <p>Le métier d'acteur était l'outil parfait pour jouer avec les rôles, adapter ma personnalité, mes émotions, mes comportements en fonction des situations, <strong class="highlight">du pur contrôle.</strong> Ce que j'ignorais, c'est que c'est exactement ce même métier qui allait me permettre de voir ce mécanisme en face, et de le guérir.</p>
       </div>
 
-      <div class="context-divider reveal"></div>
+      <div class="context-divider"></div>
 
       <div class="prose reveal">
         <p>Ce masque peut avoir <strong class="highlight">une multitude de couleurs.</strong></p>
@@ -559,7 +474,7 @@
         <p>C'est impossible avec ce masque de poursuivre ce qui compte vraiment pour toi. Tu contrôles en permanence ce que tu montres, ce que tu dis, comment tu es perçu.</p>
       </div>
 
-      <div class="context-divider reveal"></div>
+      <div class="context-divider"></div>
 
       <div class="prose reveal">
         <p>Ce qui se passe quand tu essayes de le retirer : <strong class="highlight">le corps réagit.</strong> Il voit ça comme un danger. Normal, ce masque existait pour survivre.</p>
@@ -574,149 +489,35 @@
 
   <hr class="divider container" />
 
-  <!-- ④ CE QUE C'EST / CE QUE CE N'EST PAS -->
+  <!-- ⑨ POURQUOI LONG -->
   <div class="container">
     <div class="content-section">
 
-      <span class="section-label reveal">Ce que c'est</span>
-      <div class="prose reveal">
-        <p>Ce travail, c'est de la transformation intérieure. Pas un cours. Pas une formation. Pas du coaching qui s'arrête à la surface, aux comportements, aux stratégies, à la connaissance.</p>
-        <p>On vient ensemble toucher la source de ce qui a créé ta réalité. Ce qui est inscrit dans ton inconscient et qui continue de diriger ta vie sans que tu l'aies choisi.</p>
-        <p>On va à la rencontre des parts de toi qui ont créé ce masque. On leur montre qu'il est possible aujourd'hui d'exister sans lui.</p>
-      </div>
+      <span class="long-bloc-title reveal">Pourquoi je fais ce travail</span>
 
-      <span class="section-label reveal" style="margin-top: 44px;">Ce que ce n'est pas</span>
-      <div class="prose reveal">
-        <p>Ce n'est pas de la thérapie classique où l'on analyse indéfiniment le passé. Ce n'est pas du développement personnel où l'on accumule des outils sans jamais toucher à ce qui est vraiment là. Ce n'est pas un travail qui demande des années avant de ressentir quelque chose.</p>
-        <p class="em">C'est un travail direct, en profondeur, par le corps et l'expérience. Parce que c'est la seule manière de se transformer durablement.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <hr class="divider container" />
-
-  <!-- ⑤ ÉTAPES -->
-  <div class="container">
-    <div class="content-section">
-
-      <span class="section-label reveal">Ce sur quoi on va travailler, par étape</span>
-
-      <div class="steps">
-
-        <div class="step reveal">
-          <span class="step-number">Étape 01</span>
-          <h3>Clarifier le masque</h3>
-          <p>Identifier quel rôle a été défini comme la meilleure stratégie pour survivre. D'où il vient, pourquoi il existe, quelle est son histoire. Les croyances associées, les émotions, les peurs. Cette étape seule peut créer un mouvement naturel de guérison. Elle change radicalement la perspective sur soi-même et sur ce qui a dirigé ta vie jusqu'à maintenant.</p>
-        </div>
-
-        <div class="step reveal">
-          <span class="step-number">Étape 02</span>
-          <h3>Explorer et transformer</h3>
-          <p>C'est ici qu'on rentre dans le vif du sujet. Plus qu'une histoire de compréhension, une histoire de sensations, d'émotions, de corps. On utilise des outils proches de l'hypnothérapie, directement liés au travail d'acteur dans sa capacité à jouer avec son monde intérieur. Le mouvement. L'imagination. On vient se connecter avec les charges émotionnelles bloquées à l'intérieur, celles qui, tant qu'elles ne peuvent pas circuler et s'exprimer, ne permettent pas au masque de tomber.</p>
-        </div>
-
-        <div class="step reveal">
-          <span class="step-number">Étape 03</span>
-          <h3>Exister et créer sans le masque</h3>
-          <p>Dans cette étape, on solidifie la transformation, on fait en sorte qu'il n'y ait aucun retour en arrière possible. On te familiarise avec un nouveau système de direction : au niveau rationnel, émotionnel, corporel. Tu apprends à être juste toi en toute circonstance : exprimer ouvertement ce que tu ressens, tes besoins, tes désirs. Tu <strong class="highlight">crées l'expression de ton soi sans masque</strong> dans chaque aspect de ta vie. Tu redeviens, d'une certaine façon, comme un enfant dans sa capacité à jouer, à être présent, à s'exprimer pleinement.</p>
-        </div>
-
-      </div>
-
-      <p class="step-tools reveal" style="margin-top: 36px;">Mon travail se trouve à la croisée entre psychologie, créativité et spiritualité. J'utilise des outils comme l'IFS (Internal Family System), la méditation, la thérapie cognitive, et une collection d'outils développés au fil des années en tant que mentor, et directement inspirés du travail de l'acteur.</p>
-
-    </div>
-  </div>
-
-  <hr class="divider container" />
-
-  <!-- ⑥ DÉTAILS -->
-  <div class="container">
-    <div class="content-section">
-
-      <span class="section-label reveal">Les détails</span>
-      <p class="reveal" style="margin-bottom: 36px;">Ce mentorat est intensif et sur le long terme. La durée dépend de où tu en es dans ce processus, du travail accompli, et de tes besoins.</p>
-
-      <div class="details-grid">
-
-        <div class="details-block reveal">
-          <span class="details-block-title">Durée</span>
-          <div class="durations">
-            <span class="duration-tag">8 semaines</span>
-            <span class="duration-tag">16 semaines</span>
-            <span class="duration-tag">24 semaines</span>
-          </div>
-        </div>
-
-        <div class="details-block reveal">
-          <span class="details-block-title">Format</span>
-          <ul class="details-list">
-            <li>Une session de 90 minutes toutes les deux semaines, pour laisser l'espace à la vie de se faufiler entre les sessions, et venir expérimenter dans le réel ce qu'on travaille ensemble. C'est là que les vrais changements peuvent être intégrés.</li>
-          </ul>
-        </div>
-
-        <div class="details-block reveal">
-          <span class="details-block-title">Entre les sessions</span>
-          <ul class="details-list">
-            <li>On reste en contact tout au long de l'accompagnement, par message et vocal. Tout ce que tu traverses (les avancées comme les moments difficiles) peut être partagé.</li>
-            <li>Des exercices d'intégration personnalisés, construits autour de ton histoire et de ce que tu traverses spécifiquement. Pas quelque chose de générique, mais calibré exactement pour toi.</li>
-            <li>Un call d'urgence de 30 minutes est possible si tu en ressens vraiment le besoin : partager ce qui se passe et avoir un retour direct de ma part.</li>
-          </ul>
-        </div>
-
-        <div class="details-block reveal">
-          <span class="details-block-title">Prix</span>
-          <ul class="details-list">
-            <li>En fonction de la durée d'engagement choisie, nous discutons de l'investissement pendant l'appel découverte.</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <hr class="divider container" />
-
-  <!-- ⑦ POURQUOI -->
-  <div class="container">
-    <div class="content-section">
-
-      <span class="section-label reveal">Pourquoi je fais ce travail</span>
       <div class="prose reveal">
         <p>J'avais le rêve de devenir acteur depuis l'enfance. Et comme tu le sais maintenant, ce rêve s'est inscrit en moi pour des raisons qui allaient bien au-delà du métier.</p>
         <p>Devenir acteur m'a permis de consolider mon masque à un point où je ne savais plus qui j'étais, ce que je voulais, où j'allais. J'ai perdu le sens de ma vie. Ma raison d'être.</p>
         <p>C'est paradoxalement ce même parcours, le travail d'acteur, puis un chemin plus spirituel, qui m'a permis de commencer à apercevoir l'Eliot en dessous du masque. Ce qu'il voulait. Qui il était. Ce qu'il pouvait créer.</p>
-        <p>Je suis arrivé au mentorat de manière naturelle. Je n'ai pas décidé d'être ici, j'y suis arrivé. Et aujourd'hui, accompagner des personnes bloquées dans un masque qu'elles n'arrivent pas à retirer, c'est ce qui me semble indispensable. Une mission.</p>
-        <p>Pourquoi je fais ce travail ? Parce que je crois profondément que chaque personne devrait pouvoir accéder à ce qu'elle veut vraiment. Pas ce qu'elle croit devoir vouloir, ce qui vient du dedans, de ses désirs profonds. Et le vivre. Dans le réel. Avec le sentiment d'être exactement à sa place.</p>
+        <p>Je suis arrivé au mentorat de manière naturelle, pas par décision, par nécessité. Accompagner des personnes bloquées dans un masque qu'elles n'arrivent pas à retirer, c'est la mission qui me fait me sentir le plus libre et accompli aujourd'hui.</p>
+        <p>Pourquoi je fais ce travail ? Parce que je crois profondément que chaque personne devrait pouvoir accéder à ce qu'elle veut vraiment. Pas ce qu'elle croit devoir vouloir, ce qui vient du dedans, de ses désirs profonds. Et le vivre. Dans le réel. Avec le sentiment de liberté et d'apaisement comme état le plus familier.</p>
         <p class="em">Tout ce que j'ai traversé, les difficultés comme les révélations, m'a amené à développer la capacité d'accompagner les autres dans cette transformation. Je sens que c'est le travail d'une vie qui a commencé bien avant que j'en sois conscient.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- ⑧ BOOKING -->
-  <section id="booking">
-    <div class="container">
-
-      <span class="booking-sub-italic reveal">Si tu te reconnais dans ce que je viens de décrire, c'est probablement pour toi.</span>
-
-      <span class="booking-choose reveal">Choisis ton créneau.</span>
-
-      <div class="booking-meta reveal">
-        <span class="booking-tag">45 min</span>
-        <span class="booking-tag">Tes objectifs</span>
-        <span class="booking-tag">Ma méthode</span>
-        <span class="booking-tag">Une rencontre</span>
-      </div>
-
-      <div class="cal-inline-wrap reveal">
-        <div style="width:100%;height:100%;overflow:scroll;min-height:600px" id="my-cal-inline-appeldecouverte"></div>
-      </div>
-
-    </div>
-  </section>
+  <div class="container" style="padding-bottom: 80px; text-align: center;">
+    <button
+      class="cta-btn reveal"
+      data-cal-link="eliot.vincent/appeldecouverte"
+      data-cal-namespace="appeldecouverte"
+      data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+    >
+      Réserve ton appel découverte
+      <span class="cta-arrow">→</span>
+    </button>
+  </div>
 
   <footer>
     <div class="container">
@@ -743,12 +544,11 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
-  <!-- Cal inline embed -->
   <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
     Cal("init", "appeldecouverte", {origin:"https://app.cal.com"});
     Cal.ns.appeldecouverte("inline", {
-      elementOrSelector:"#my-cal-inline-appeldecouverte",
+      elementOrSelector:"#my-cal-inline",
       config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
       calLink: "eliot.vincent/appeldecouverte",
     });
