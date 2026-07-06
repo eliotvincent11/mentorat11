@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accompagnement Privé 1:1 — Eliot Vincent</title>
+  <title>Accompagnement 1:1 — Eliot Vincent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -25,7 +25,6 @@
       --terracotta:     #C4724A;
       --cream:          #FAF5F0;
       --cream-dark:     #F2EAE1;
-      --rose-muted:     #D4A5A5;
       --text-dark:      #2C1A1A;
       --text-body:      #5C3A3A;
       --text-light:     #9C7070;
@@ -53,14 +52,6 @@
       letter-spacing: -0.01em;
     }
 
-    h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-      font-weight: 400;
-      line-height: 1.3;
-      color: var(--bordeaux-deep);
-    }
-
     h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(1.15rem, 2.8vw, 1.4rem);
@@ -69,7 +60,6 @@
       margin-bottom: 10px;
     }
 
-    /* ── Nav ── */
     .nav { padding: 24px 0 0; display: flex; justify-content: center; }
     .nav-name {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -78,7 +68,6 @@
       letter-spacing: 0.08em; text-transform: uppercase;
     }
 
-    /* ── HERO ── */
     #hero { padding: 48px 0 80px; }
 
     .hero-photo-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
@@ -107,15 +96,6 @@
     .hero-headline { margin-bottom: 6px; }
     .hero-headline em { font-style: italic; color: var(--bordeaux-light); }
 
-    .hero-sub-h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-      font-weight: 400; font-style: italic;
-      color: var(--bordeaux-deep);
-      line-height: 1.35; margin-top: 8px;
-    }
-
-    /* ── Callout ── */
     .hero-callout {
       background: linear-gradient(135deg, rgba(107,30,46,0.07) 0%, rgba(196,114,74,0.06) 100%);
       border-left: 3px solid var(--bordeaux-light);
@@ -126,7 +106,6 @@
       font-style: italic; color: var(--text-dark); line-height: 1.8;
     }
 
-    /* ── CTA Button ── */
     .cta-btn {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--bordeaux-deep); color: var(--cream);
@@ -141,34 +120,28 @@
     .cta-arrow { transition: transform 0.2s ease; }
     .cta-btn:hover .cta-arrow { transform: translateX(3px); }
 
-    /* ── Body ── */
     .hero-body { display: flex; flex-direction: column; gap: 18px; margin-top: 40px; }
     .hero-body p { font-size: 1rem; color: var(--text-body); line-height: 1.85; }
-    .hero-body p.emphasis {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.2rem, 3vw, 1.4rem); font-style: italic; color: var(--text-dark);
-    }
     .hero-body p.closing {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-style: italic; color: var(--bordeaux-deep);
+      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      font-style: italic; color: var(--bordeaux-deep);
     }
 
     strong.highlight { font-weight: 500; color: var(--bordeaux-deep); }
 
-    /* ── QUOTE BLOCK ── */
     .quote-section { padding: 0 0 80px; }
     .quote-bg {
       background: linear-gradient(135deg, var(--bordeaux-deep) 0%, #5A1525 100%);
-      border-radius: 20px; padding: 52px 44px; position: relative; overflow: hidden;
+      border-radius: 20px; padding: 52px 44px;
     }
     .quote-text {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(1.3rem, 4vw, 1.7rem);
       font-weight: 400; font-style: italic;
-      color: var(--cream); line-height: 1.8; position: relative; z-index: 1;
+      color: var(--cream); line-height: 1.8;
     }
 
-    /* ── SECTIONS ── */
     .content-section { padding: 0 0 72px; }
 
     .section-label {
@@ -187,7 +160,6 @@
 
     .context-divider { border: none; border-top: 1px solid rgba(180,120,120,0.18); margin: 36px 0; }
 
-    /* ── Bloc court ── */
     .short-bloc {
       background: rgba(242,234,225,0.5);
       border: 1px solid rgba(180,120,120,0.2);
@@ -201,20 +173,15 @@
       color: var(--bordeaux-mid); text-decoration: none;
       border-bottom: 1px solid rgba(139,38,53,0.3);
       padding-bottom: 2px;
-      transition: color 0.2s ease;
     }
-    .short-bloc-link:hover { color: var(--bordeaux-deep); }
 
-    /* ── ÉTAPES ── */
     .steps { display: flex; flex-direction: column; gap: 28px; margin-top: 28px; }
     .step { padding: 28px 32px; border: 1px solid rgba(180,120,120,0.2); border-radius: 16px; background: rgba(242,234,225,0.4); }
     .step-number { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracotta); display: block; margin-bottom: 8px; }
     .step p { font-size: 0.97rem; color: var(--text-body); line-height: 1.85; }
     .step-note { margin-top: 12px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.97rem; font-style: italic; color: var(--text-light); }
-
     .step-tools { margin-top: 36px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; font-style: italic; color: var(--text-light); line-height: 1.8; }
 
-    /* ── DÉTAILS ── */
     .details-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
     .details-block-title { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bordeaux-deep); display: block; margin-bottom: 10px; }
     .details-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -223,10 +190,8 @@
     .durations { display: flex; flex-wrap: wrap; gap: 10px; }
     .duration-tag { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; font-style: italic; color: var(--text-dark); padding: 6px 18px; border: 1px solid rgba(180,120,120,0.35); border-radius: 100px; }
 
-    /* ── DIVISEUR ── */
     .divider { border: none; border-top: 1px solid rgba(180,120,120,0.18); margin: 0 0 72px; }
 
-    /* ── BOOKING ── */
     #booking { padding: 0 0 100px; }
     .booking-sub { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--text-light); margin-bottom: 28px; display: block; }
     .booking-choose { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 400; color: var(--bordeaux-deep); margin-bottom: 24px; display: block; }
@@ -234,17 +199,13 @@
     .booking-tag { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.92rem; font-style: italic; color: var(--text-light); padding: 5px 14px; border: 1px solid rgba(180,120,120,0.3); border-radius: 100px; }
     .cal-inline-wrap { border-radius: 16px; overflow: hidden; border: 1px solid rgba(180,120,120,0.2); background: var(--cream-dark); }
 
-    /* ── Long blocs ── */
     .long-bloc-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 1.9rem); font-weight: 400; color: var(--bordeaux-deep); margin-bottom: 32px; display: block; }
 
-    /* ── Footer ── */
     footer { padding: 32px 0 48px; text-align: center; }
     .footer-text { font-size: 0.78rem; color: var(--text-light); }
 
-    /* ── Scroll progress ── */
     .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--bordeaux-deep), var(--terracotta)); width: 0%; z-index: 100; }
 
-    /* ── Reveals ── */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
@@ -263,7 +224,7 @@
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <nav class="nav container">
-    <span class="nav-name">Eliot · Mentorat</span>
+    <span class="nav-name">Eliot · Coach émotionnel</span>
   </nav>
 
   <!-- ① HERO -->
@@ -274,13 +235,12 @@
         <img src="eliot.jpg" alt="Eliot" class="hero-photo" width="112" height="112" />
       </div>
 
-      <span class="hero-eyebrow reveal">Pour les ambitieux qui ont construit quelque chose de solide, mais pour qui à l'intérieur, ça ne sonne pas juste.</span>
+      <span class="hero-eyebrow reveal">Pour ceux qui osent tracer leur propre chemin.</span>
 
       <div class="reveal">
         <h1 class="hero-headline">
-          Tu sens que c'est le moment de <em>faire tomber le masque.</em>
+          Tu connais la prochaine étape, mais <em>tu n'arrives pas encore à te l'autoriser.</em>
         </h1>
-
         <span class="hero-eyebrow-2">Un accompagnement personnalisé 1:1 sur le long terme.</span>
       </div>
 
@@ -295,20 +255,23 @@
       </button>
 
       <div class="hero-callout reveal">
-        En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment.<br />Et une réelle expérience du travail qu'on peut réaliser ensemble.
+        En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment.<br />
+        Et une réelle expérience du travail qu'on peut réaliser ensemble.
       </div>
 
       <div class="hero-body">
 
-        <p class="reveal">Il y a quelque chose que tu veux vraiment : un projet, une direction, <strong class="highlight">une façon d'exister dans ton travail ou ta vie personnelle,</strong> et tu n'arrives pas encore à <strong class="highlight">te l'autoriser.</strong></p>
+        <p class="reveal">Il y a quelque chose que tu veux vraiment : un projet, une direction, <strong class="highlight">une façon d'exister dans ton travail ou ta vie personnelle,</strong> et tu n'arrives pas encore à te l'autoriser.</p>
 
         <p class="reveal">Au fond, tu sais exactement où tu dois aller, mais <strong class="highlight">tu continues de te saboter.</strong></p>
 
-        <p class="reveal reveal-delay-1">Tu es fier de ce que t'as accompli, mais t'es arrivé jusqu'ici en jouant <strong class="highlight">un rôle que tu ne veux plus jouer.</strong> Cette version de toi est peut-être pleine de ressources, mais elle ne te permet pas de créer une vie dans laquelle tu te sens <strong class="highlight">apaisé et aligné.</strong></p>
+        <p class="reveal reveal-delay-1">Tu es fier de ce que t'as déjà accompli, mais tu fais face à <strong class="highlight">un blocage que tu n'arrives pas à traverser.</strong> Ça se manifeste par de la procrastination, du perfectionnisme, de la sur-analyse ou même une limite dans ta visibilité.</p>
 
-        <p class="reveal reveal-delay-1">T'as déjà fait un travail sur toi. La thérapie. Les livres. Ça t'a fait évoluer, mais il reste <strong class="highlight">cette distance entre ce que tu es et ce que tu veux vraiment vivre.</strong></p>
+        <p class="reveal reveal-delay-1">C'est comme te prendre encore et encore <strong class="highlight">le même plafond de verre.</strong> Les doutes et le sentiment d'imposteur font surface.</p>
 
-        <p class="closing reveal reveal-delay-2" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.2rem, 3vw, 1.4rem); font-style: italic; color: var(--bordeaux-deep);">La frustration a pris plus de place que la joie. Tu sens qu'il n'y a plus d'autre choix que de faire tomber le masque et que tu es prêt à construire une vie qui ne fait aucun doute pour toi.</p>
+        <p class="reveal reveal-delay-1">T'as déjà fait un travail sur toi. La thérapie. Les livres. Ça t'a fait évoluer, mais il reste <strong class="highlight">cette distance entre ce que tu es et ce que tu veux vraiment.</strong></p>
+
+        <p class="closing reveal reveal-delay-2">La frustration a pris plus de place que la joie. Tu sens que c'est le moment de faire tomber ces barrières émotionnelles qui t'empêchent de construire cette vie qui ne fait aucun doute pour toi.</p>
 
       </div>
 
@@ -318,9 +281,7 @@
   <!-- ② QUOTE -->
   <div class="quote-section container">
     <div class="quote-bg reveal">
-      <p class="quote-text">
-        "Toute l'énergie que tu mettais à maintenir ce rôle se libère."
-      </p>
+      <p class="quote-text">"Toute l'énergie que tu mettais à maintenir ce rôle se libère."</p>
     </div>
   </div>
 
@@ -341,7 +302,7 @@
       <span class="section-label reveal">Ce que c'est</span>
       <div class="prose reveal">
         <p>Ce travail, c'est de la transformation intérieure. Pas un cours. Pas une formation. Pas du coaching qui s'arrête aux comportements, aux stratégies ou à la connaissance.</p>
-        <p>On vient ensemble reprogrammer ce qui a été inscrit dans ton inconscient. Ce qui a conditionné et dirigé ta vie jusqu'à maintenant. On va à la rencontre des parts de toi qui ont créé ce masque. On leur montre qu'il est possible aujourd'hui d'exister sans lui.</p>
+        <p>On vient ensemble reprogrammer ce qui a été inscrit dans ton inconscient. Ce qui conditionne les limites de ta progression. On va à la rencontre de ces parts de toi qui décident de ce qui est possible et ce qui ne l'est pas. On leur montre une nouvelle voie à emprunter qui s'aligne avec ce que tu veux vraiment.</p>
       </div>
     </div>
   </div>
@@ -366,7 +327,7 @@
           <span class="step-number">02</span>
           <h3>Explorer et transformer</h3>
           <p>On rentre dans le vif du sujet. Plus qu'une histoire de compréhension, une histoire de sensations, d'émotions. On utilise des outils proches de l'hypnothérapie, directement liés au travail d'acteur. On crée un mouvement physique et émotionnel. On permet aux émotions bloquées de circuler pour que le processus de guérison de tes parts blessées du passé puisse opérer.</p>
-          <p class="step-note">→ La compassion et la bienveillance est la clé pour permettre au masque de tomber.</p>
+          <p class="step-note">→ La compassion et la bienveillance sont la clé pour permettre au masque de tomber.</p>
         </div>
 
         <div class="step reveal">
@@ -417,8 +378,6 @@
           </ul>
         </div>
 
-
-
       </div>
     </div>
   </div>
@@ -440,9 +399,22 @@
     </div>
   </section>
 
+  <!-- ⑧ BOUTON -->
+  <div class="container" style="padding-bottom: 80px; text-align: center;">
+    <button
+      class="cta-btn reveal"
+      data-cal-link="eliot.vincent/appeldecouverte"
+      data-cal-namespace="appeldecouverte"
+      data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+    >
+      Réserve ton appel découverte
+      <span class="cta-arrow">→</span>
+    </button>
+  </div>
+
   <hr class="divider container" />
 
-  <!-- ⑧ CONTEXTE LONG -->
+  <!-- ⑨ CONTEXTE LONG -->
   <div class="container" id="contexte-long">
     <div class="content-section">
 
@@ -480,7 +452,7 @@
 
   <hr class="divider container" />
 
-  <!-- ⑨ POURQUOI LONG -->
+  <!-- ⑩ POURQUOI -->
   <div class="container">
     <div class="content-section">
 
@@ -491,13 +463,13 @@
         <p>Devenir acteur m'a permis de consolider mon masque à un point où je ne savais plus qui j'étais, ce que je voulais, où j'allais. J'ai perdu le sens de ma vie. Ma raison d'être.</p>
         <p>C'est paradoxalement ce même parcours, le travail d'acteur, puis un chemin plus spirituel, qui m'a permis de commencer à apercevoir l'Eliot en dessous du masque. Ce qu'il voulait. Qui il était. Ce qu'il pouvait créer.</p>
         <p>Je suis arrivé au coaching de manière naturelle, pas par décision, par nécessité. Accompagner des personnes bloquées dans un masque qu'elles n'arrivent pas à retirer, c'est la mission qui me fait me sentir le plus libre et accompli aujourd'hui.</p>
-
       </div>
 
     </div>
   </div>
 
-  <div class="container" style="padding-bottom: 80px; text-align: center;">
+  <!-- BOUTON FINAL -->
+  <div class="container" style="padding-bottom: 100px; text-align: center;">
     <button
       class="cta-btn reveal"
       data-cal-link="eliot.vincent/appeldecouverte"
