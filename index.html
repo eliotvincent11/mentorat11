@@ -130,16 +130,31 @@
 
     strong.highlight { font-weight: 500; color: var(--bordeaux-deep); }
 
-    .quote-section { padding: 0 0 80px; }
+    .problem-grid {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .problem-grid li {
+      font-size: 0.97rem; color: var(--text-body); line-height: 1.6;
+      background: var(--cream-dark);
+      border: 1px solid rgba(180,120,120,0.25);
+      border-radius: 22px;
+      padding: 24px 26px;
+    }
+
+    .quote-section { padding: 0 0 60px; }
     .quote-bg {
       background: linear-gradient(135deg, var(--bordeaux-deep) 0%, #5A1525 100%);
-      border-radius: 20px; padding: 52px 44px;
+      border-radius: 18px; padding: 34px 32px;
+      max-width: 640px; margin: 0 auto;
     }
     .quote-text {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
       font-weight: 400; font-style: italic;
-      color: var(--cream); line-height: 1.8;
+      color: var(--cream); line-height: 1.65;
     }
 
     .content-section { padding: 0 0 72px; }
@@ -237,10 +252,10 @@
 
       <div class="reveal">
         <h1 class="hero-headline">
-          Tu connais la prochaine étape, mais <em>tu n'arrives pas encore à te l'autoriser.</em>
+          T'as déjà atteint un certain niveau de succès, mais <em>tu ne te sens pas pleinement libre et apaisé.</em>
         </h1>
         <span class="hero-eyebrow" style="margin-top: 16px;">Pour ceux qui osent tracer leur propre chemin.</span>
-        <span class="hero-eyebrow-2">Un accompagnement personnalisé 1:1 sur le long terme.</span>
+        <span class="hero-eyebrow-2">Un accompagnement personnalisé 1:1</span>
       </div>
 
       <button
@@ -254,23 +269,19 @@
       </button>
 
       <div class="hero-callout reveal">
-        En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment.<br />
+        En 45 minutes, tu auras une vision claire de ce qui te limite vraiment.<br />
         Et une réelle expérience du travail qu'on peut réaliser ensemble.
       </div>
 
       <div class="hero-body">
 
-        <p class="reveal">Il y a quelque chose que tu veux accomplir : un nouveau projet, une nouvelle direction, une façon d'exister dans ton travail ou ta vie personnelle. <strong class="highlight">Un niveau de réussite que tu n'as pas encore touché.</strong></p>
-
-        <p class="reveal">Au fond, tu sais exactement où tu dois aller, <strong class="highlight">mais tu continues de te saboter.</strong></p>
-
-        <p class="reveal reveal-delay-1">T'as déjà accompli quelque chose de solide, mais tu fais face à <strong class="highlight">un blocage que tu n'arrives pas à traverser.</strong> Ça se manifeste par de la procrastination, du perfectionnisme, de la sur-analyse ou même une limite dans ta visibilité.</p>
-
-        <p class="reveal reveal-delay-1">C'est comme te prendre encore et encore <strong class="highlight">le même plafond de verre.</strong></p>
-
-        <p class="reveal reveal-delay-1">Les doutes et le sentiment d'imposteur font surface. T'as déjà fait un travail sur toi. La thérapie. Les livres. Ça t'a fait évoluer, mais il reste <strong class="highlight">cette distance entre ce que tu es et ce que tu veux vraiment.</strong></p>
-
-        <p class="closing reveal reveal-delay-2">La frustration a pris plus de place que la joie. Tu sens que c'est le moment de faire tomber ces barrières émotionnelles qui t'empêchent de construire cette vie qui ne fait aucun doute pour toi.</p>
+        <ul class="problem-grid">
+          <li class="reveal">T'as déjà accompli quelque chose de solide, mais <strong class="highlight">ça ne sonne pas complètement juste à l'intérieur.</strong></li>
+          <li class="reveal reveal-delay-1">Tu ne t'autorises pas pleinement à poursuivre ce projet qui te tient à cœur, une certaine direction, ou encore une façon d'exister dans ton travail ou ta vie personnelle (<strong class="highlight">l'auto-sabotage bat son plein</strong>).</li>
+          <li class="reveal reveal-delay-1">Il y a toujours trop de place pour ce que tu "dois" être, et pas assez pour ce que tu "veux" être. <strong class="highlight">Ça te prend toute ton énergie.</strong></li>
+          <li class="reveal reveal-delay-2">T'as le sentiment de <strong class="highlight">courir après une ligne d'arrivée qui ne fait que s'éloigner.</strong></li>
+          <li class="reveal reveal-delay-2">Tu te sens bloqué dans une situation <strong class="highlight">qui ne semble pas avoir de porte de sortie.</strong></li>
+        </ul>
 
       </div>
 
@@ -280,20 +291,23 @@
   <!-- ② QUOTE -->
   <div class="quote-section container">
     <div class="quote-bg reveal">
-      <p class="quote-text">"Les conditionnements du passé sont plus forts que ce que tu veux dans le présent. Jusqu'au jour où ils ne le sont plus."</p>
+      <p class="quote-text">"<strong>La frustration a pris plus de place que la joie.</strong> Tu sens que c'est le moment de faire tomber ces barrières émotionnelles qui t'empêchent de créer une vie qui ne fait aucun doute pour toi."</p>
     </div>
   </div>
 
-  <!-- ③ CONTEXTE COURT -->
+  <!-- ③ LA TRANSFORMATION -->
   <div class="container">
-    <div class="short-bloc reveal">
-      <span class="section-label" style="margin-bottom: 16px;">Un peu de contexte</span>
-      <p>J'ai tout de suite choisi la voie de la passion : le métier d'acteur. Je voulais rien d'autre qu'une vie extraordinaire.</p>
-      <p>J'ai très vite fait face à des blocages que ni la volonté, ni le courage ne pouvaient traverser. Je devenais un maître de l'auto-sabotage.</p>
-      <p>C'est en apprenant à transformer ce que j'étais au niveau émotionnel et physique que tout a changé.</p>
-      <a href="#contexte-long" class="short-bloc-link">Plus de détails ↓</a>
+    <div class="content-section">
+      <span class="section-label reveal">La transformation</span>
+      <div class="prose reveal">
+        <p>L'objectif principal de cet accompagnement, c'est que tu sois libre de poursuivre exactement ce que tu désires, et de la manière dont tu le désires. Créer une réussite selon tes propres critères.</p>
+        <p>Que tu développes la capacité de construire ta vie autour de ce que tu veux, et non de ce que tu dois "être" ou "faire".</p>
+        <p>Que tu transformes ta relation au monde et aux autres d'une manière à créer la stabilité émotionnelle et une régulation de ton système nerveux qui te permet d'accomplir tout ce que tu décides d'entreprendre.</p>
+      </div>
     </div>
   </div>
+
+  <hr class="divider container" />
 
   <!-- ④ CE QUE C'EST -->
   <div class="container">
@@ -318,7 +332,7 @@
         <div class="step reveal">
           <span class="step-number">Étape 01</span>
           <h3>Révéler</h3>
-          <p>Identifier et clarifier ce que ton toi du passé a défini comme la meilleure stratégie de survie. La vraie raison de l'auto-sabotage.</p>
+          <p>Identifier et clarifier ce que ton toi du passé a défini comme la meilleure stratégie de survie. La vraie raison derrière les conditionnements qui t'empêchent d'accéder à ce que tu veux vraiment.</p>
           <p class="step-note">→ Cette étape seule crée un mouvement naturel de transformation. Elle change radicalement la perspective sur soi-même.</p>
         </div>
 
@@ -397,89 +411,6 @@
       </div>
     </div>
   </section>
-
-  <hr class="divider container" />
-
-  <!-- ⑧ CONTEXTE LONG -->
-  <div class="container" id="contexte-long">
-    <div class="content-section">
-
-      <span class="long-bloc-title reveal">Un peu de contexte</span>
-
-      <div class="prose reveal">
-        <p>J'ai tout de suite choisi la voie de la passion et de l'ambition : le métier d'acteur. Je voulais rien d'autre qu'une vie extraordinaire, dans laquelle déployer tout mon potentiel et me sentir en paix avec moi-même était ma priorité.</p>
-        <p>J'ai très vite fait face à des blocages que ni la volonté, ni le courage ne pouvaient traverser.</p>
-        <p>Quelque chose d'impalpable entravait ma route. La frustration, c'est que je savais exactement ce que je voulais, quoi faire, où aller, mais que quelque chose en moi m'en empêchait. Je devenais un maître de l'auto-sabotage.</p>
-        <p>Tout a commencé à un moment très précis sur mon chemin : quand le potentiel de réussite est devenu trop réel.</p>
-        <p>Comme si la position de jeune acteur qui façonnait son art était acceptable, mais celle d'un acteur professionnel sur le devant de la scène ne l'était pas.</p>
-        <p>Tout d'un coup je ne faisais plus ce qu'il fallait : j'évitais, je fuyais, je me limitais. Aucune stratégie, aucun plan ne pouvait me faire franchir le mur invisible qui se plaçait devant moi.</p>
-      </div>
-
-      <div class="context-divider"></div>
-
-      <div class="prose reveal">
-        <p>On ne parle pas de quelques mois difficiles dans ma vingtaine, non. On parle de plusieurs années à stagner, sans aucune réelle progression.</p>
-        <p>Et comme je te l'ai dit, pour moi le plan B n'existait pas. Pas mon style. L'abandon n'était pas une option.</p>
-        <p>Ce qui se passe avec le temps, c'est que tu emmagasines de la frustration, qui se transforme en colère, en profonde tristesse, et te mène vers des états à l'opposé de toute "paix intérieure".</p>
-        <p>La suite logique, c'est une perte totale de sens. Et tout d'un coup, ce choix d'une vie extraordinaire me fait me retrouver exactement là où elle était censée ne pas m'emmener.</p>
-      </div>
-
-      <div class="context-divider"></div>
-
-      <div class="prose reveal">
-        <p>Quelque chose dans la position de réussite en tant qu'acteur professionnel était perçu par une part de moi comme dangereux. Inconsciemment, je me protégeais de quelque chose. Mais quoi ? Pourquoi se protéger de ce qui compte vraiment pour toi ?</p>
-        <p>C'est là que les conditionnements du passé sont plus forts que ce que tu veux dans le présent. Parce qu'ils se sont construits pour une raison qui dépasse toutes les autres : celle de survivre.</p>
-        <p>Ton identité se forme autour des expériences de l'environnement dans lequel tu as grandi, aussi subtiles soient-elles. Tu développes sans le réaliser une multitude de stratégies de survie.</p>
-        <p>Ton identité détermine ensuite ta réalité.</p>
-      </div>
-
-      <div class="context-divider"></div>
-
-      <div class="prose reveal">
-        <p>J'ai appris très jeune que je devais me faire tout petit, que je ne devais surtout pas être un poids pour les autres. Me rendre invisible a été enregistré comme ma meilleure stratégie.</p>
-        <p>Il y en a d'autres, mais celle-là est la plus évidente en relation avec mon blocage. Parce que s'il y a un métier pour lequel réussir demande de la visibilité, c'est bien celui d'acteur.</p>
-        <p>Pour traverser ce type de blocage, il est nécessaire de descendre dans le corps. Transformer ce qu'on est au niveau des émotions, du système nerveux. Là où tout est sauvegardé. <strong class="highlight">Comprendre ne suffit pas.</strong></p>
-        <p class="em">Quand tu libères ces mécanismes de protection du passé, tu peux enfin poursuivre ce que tu veux sans te limiter. Tu peux enfin être qui tu veux sans te censurer. Et ton désir immuable d'une vie extraordinaire n'est plus un fardeau à porter, mais ce qui t'offre la paix intérieure et l'expression de ton plein potentiel que tu cherchais.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <hr class="divider container" />
-
-  <!-- ⑨ POURQUOI -->
-  <div class="container">
-    <div class="content-section">
-
-      <span class="long-bloc-title reveal">Pourquoi je fais ce travail</span>
-
-      <div class="prose reveal">
-        <p>Je me suis retrouvé à la limite de ce que je pouvais endurer. Pendant un moment je ne savais plus qui j'étais, ce que je voulais, où j'allais. J'ai perdu le sens de ma vie. Ma raison d'être.</p>
-        <p>C'est un mélange entre certaines techniques d'acteur, la méditation, et des centaines de livres de développement personnel qui m'ont aidé à traverser ce qui semblait insurmontable.</p>
-        <p>C'est la capacité de transformer ce que j'étais au niveau émotionnel et physique qui m'a permis d'incarner la version de moi la plus libre et apaisée. Capable de poursuivre ce que je voulais vraiment.</p>
-        <p>Le coaching émotionnel est arrivé de manière naturelle dans ma vie, pas par décision, par nécessité. Accompagner des personnes qui se sentent bloquées sur leur chemin, c'est aujourd'hui la mission qui me fait me sentir le plus accompli.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom: 100px;">
-    <div style="text-align: center; margin-bottom: 28px;">
-      <button
-        class="cta-btn reveal"
-        data-cal-link="eliot.vincent/appeldecouverte"
-        data-cal-namespace="appeldecouverte"
-        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-      >
-        Réserve ton appel découverte
-        <span class="cta-arrow">→</span>
-      </button>
-    </div>
-    <div class="hero-callout reveal">
-      En 45 minutes, tu auras une vision claire de ce qui te bloque vraiment.<br />
-      Et une réelle expérience du travail qu'on peut réaliser ensemble.
-    </div>
-  </div>
 
   <footer>
     <div class="container">
